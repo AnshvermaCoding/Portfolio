@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>ansh-portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+  * {
+    padding: 0;
+    margin: 0;
+    user-select: none;
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+  }
+  #container1 {
+    min-height: 100vh;
+    background-color: purple;
+  }
+  #navBar {
+    position: fixed;
+    border: 1px solid black;
+    width: 100%;
+    height: 6rem; 
+    display: flex;
+    align-items: center;
+    background-color: purple;
+    z-index: 3;
+  }
+  #logo {
+    font-size: 3rem;
+    margin-left: 1rem;
+    border: 0px solid black;
+    width: 30%;
+    font-weight: bold;
+    color: chartreuse;
+  }
+  .text {
+    color: gold;
+  }
+  #link {
+    font-size: 1.8rem;
+    margin-left: 0rem;
+    border: 0px solid black;
+    display: flex;
+    overflow-x: auto;
+    scroll-behaviour: auto;
+    flex-wrap: no-wrap;
+    width: 80%;
+    color: white;
+  }
+  .links {
+    margin: 0rem 1rem 0rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid black;
+    color: white;
+    text-decoration: none;
+  }
+  .links:hover {
+    text-decoration: underline;
+  }
+  .links:active {
+    text-decoration: underline;
+  }
+  #img1 {
+    height: 50rem;
+    width: 50rem;
+    border: 0px solid black;
+    position: absolute;
+    margin-top: 80%;
+    margin-left: 9%;
+    border-radius: 10%;
+    background-image: url("Logo.png");
+    background-size: cover;
+  }
+  #textBox {
+    height: 25rem; 
+    width: 100%;
+    border: 0px solid black; 
+    position: absolute;
+    top: 13%;
+    font-size: 2.3rem;
+    color: gold;
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(0,0,0,0.6);
+  }
+  #text1 {
+    margin: 2rem 0 0 4rem;
+    color: pink;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: showText 1.5s forwards;
+    animation-delay: 0.3s;
+  }
+  #text2 {
+    margin: 1rem 0 0 4rem;
+    color: orange;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: showText 1.5s forwards;
+    animation-delay: 0.8s;
+  }
+  #text3 {
+    margin: 1rem 0 0 4rem;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: showText 1.5s forwards;
+    animation-delay: 1.3s;
+  }
+  #style1 {
+    color: pink;
+  }
+  #style2 {
+    color: pink;
+  }
+  @keyframes showText {
+    to {
+      width: 85%;
+    }
+  }
+  #container2 {
+    min-height: 100vh;
+    background-color: white;
+    
+  }
+  #title2 {
+    font-size: 5rem;
+    text-align: center;
+    position: relative;
+    top: 8rem;
+    text-shadow: 0 0 10px rgba(0,0,0,0.6);
+    color: darkblue;
+  }
+  .skills {
+    height: 15rem;
+    width: 90%;
+    border: 1px solid black;
+    position: relative;
+    margin: auto;
+    margin-top: 3.7rem;
+    display: flex;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.6);
+    transition: 0.5s ease;
+  }
+  .skills:hover {
+    transform: scale(1.03);
+  }
+  #skill1 {
+    margin-top: 11rem;
+  }
+  .skillLogo {
+    height: 15rem;
+    width: 15rem;
+    border: 0px solid black;
+    background-size: cover;
+    background-position: center;
+  }
+  #skillLogo1 {
+    background-image: url("Html.jpg");
+    background-position: 50% 40%;
+  }
+  #skillLogo2 {
+    background-image: url("Css.jpg");
+    background-position: 50% 40%;
+  }
+  #skillLogo3 {
+    background-image: url("Js.jpg");
+    background-position: 50% 40%;
+  }
+  #skillLogo4 {
+    background-image: url("Php.jpg");
+    
+  }
+  #skillLogo5 {
+    background-image: url("Mysql.jpg");
+  }
+  .skillDescription {
+    height: 15rem;
+    width: 73%;
+    border: 0px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.3rem;
+    background-color: purple;
+    color: white;
+    padding: 1rem;
+    transition: 0.5s;
+  }
+  .skillDescription:active {
+    background-color: red;
+  }
+  
+  #container3 {
+    min-height: 180vh;
+    background-color: #242325;
+    margin-top: 4rem;
+  }
+  #title3 {
+    font-size: 5rem;
+    text-align: center;
+    position: relative;
+    top: 8rem;
+    text-shadow: 0 0 10px rgba(0,0,0,0.6);
+    color: aliceblue;
+  }
+  .projects {
+    height: 40rem;
+    width: 90%;
+    border: 1px solid white;
+    position: relative;
+    margin: auto;
+    top: 7rem;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(255,255,255,0.6);
+    margin-top: 5rem;
+    transition: 0.5s ease;
+    background-color: white;
+  }
+  .projects:hover {
+    transform: translateY(-1rem);
+    transform: scale(1.03);
+  }
+  .projects:active {
+    transition: 0.5s ease;
+    background-color: red;
+  } 
+  .projectLogo {
+    height: 28rem;
+    width: 100%;
+    border-bottom: 1px solid white;
+    background-size: cover;
+  }
+  .headings {
+    height: 4rem;
+    width: 100%;
+    border: 0px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 2rem;
+    box-shadow: 0 -6px 10px rgba(0,0,0,0.3);
+    color: darkblue;
+    paddding-top: 1rem;
+  }
+  .projectDescription {
+    height: 8rem;
+    width: 100%;
+    border: 0px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    color: darkgreen;
+    background-color: transparent;
+    text-align: center;
+  }
+  #projectLogo1 {
+    background-image: url("ecom.jpg");
+    background-position: 50% 60%;
+  }
+  #projectLogo2 {
+    background-image: url("blog.jpg");
+    background-position: 50% 60%;
+  }
+  #projectLogo3 {
+    background-image: url("quiz.jpg");
+    background-position: 50% 60%;
+  }
+  #projectLogo4 {
+    background-image: url("flybird.jpg");
+    background-position: 50% 50%;
+  }
+  #container4 {
+    min-height: 110vh;
+    background-color: #D2D6EF;
+  }
+  #title4 {
+    font-size: 5rem;
+    text-align: center;
+    position: relative;
+    top: 8rem;
+    text-shadow: 0 0 10px rgba(0,0,0,0.6);
+    color: #242325;
+  }
+  .certificates {
+    height: 48rem;
+    width: 90%;
+    border: 1px solid black;
+    position: relative;
+    margin: auto;
+    top: 7rem;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    margin-top: 5rem;
+    transition: 0.5s ease;
+    background-color: white;
+  }
+  .certificates:hover {
+    transform: translateY(-1rem);
+    transform: scale(1.03);
+  }
+  .certificates:active {
+    transition: 0.5s ease;
+    background-color: red;
+  }
+  .certificateLogo {
+    height: 40.5rem;
+    width: 100%;
+    border-bottom: 1px solid black;
+    background-size: cover;
+  }
+  #certificateLogo1 {
+    background-image: url("HtmlCertificate.jpg");
+    background-size: cover;
+  }
+  #certificateLogo2 {
+    background-image: url("CssCertificate.jpg");
+    background-size: cover;
+  }
+  .certificateDescription {
+    height: 7.5rem;
+    width: 100%;
+    border: 0px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    color: darkgreen;
+    background-color: transparent;
+    text-align: center;
+    box-shadow: 0 0px 10px rgba(0,0,0,0.3);
+  }
+  #container5 {
+    min-height: 100vh;
+    background-color: #56638A;
+  }
+  #title5 {
+    font-size: 5rem;
+    text-align: center;
+    position: relative;
+    top: 8rem;
+    text-shadow: 0 0 10px rgba(0,0,0,0.6);
+    color: aliceblue;
+  }
+  #message1 {
+    height: 7.5rem;
+    width: 100%;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0.5rem;
+    font-size: 3rem;
+    color: pink;
+    background-color: transparent;
+    text-align: center;
+    box-shadow: 0 0px 0px rgba(0,0,0,0.3);
+    position: relative;
+    top: 14rem;
+    width: 80%;
+    margin: auto;
+    border-radius: 60px;
+  }
+  #message2 {
+    height: 15rem;
+    width: 100%;
+    border: 0px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0.5rem;
+    font-size: 3rem;
+    color: pink;
+    background-color: transparent;
+    text-align: center;
+    box-shadow: 0 0px 0px rgba(0,0,0,0.3);
+    position: relative;
+    top: 14rem;
+    width: 100%;
+    margin: auto;
+    font-style: italic;
+  }
+  #contactLogo {
+    height: 60rem;
+    width: 40rem;
+    border: 0px solid black;
+    position: relative;
+    margin: auto;
+    top: 15rem;
+    border-radius: 10%;
+    background-image: url("img2.png");
+    background-size: cover;
+  }
+  #contactButton {
+    height: 10rem;
+    width: 40rem;
+    font-size: 3rem;
+    border: 1px solid gold;
+    position: relative;
+    top: 11rem;
+    box-shadow: 0 0px 10px rgba(0,0,0,0.5);
+    border-radius: 40px;
+    background-color: pink;
+    transition: 0.5s;
+    display: block;
+    margin: auto;
+  }
+  #contactButton:hover {
+    background-color: red;
+    color: aliceblue;
+  }
+  #contactButton:active {
+    background-color: red;
+    color: aliceblue;
+    transform: scale(0.95);
+  }
+  #container6 {
+    min-height: 100vh;
+    background-color: #333333;
+  }
+  #title6 {
+    font-size: 5rem;
+    text-align: center;
+    position: relative;
+    top: 8rem;
+    text-shadow: 0 0 10px rgba(0,0,0,0.6);
+    color: aliceblue;
+  }
+  #rect1 {
+    height: 50rem;
+    width: 40rem;
+    border: 10px solid gold;
+    position: relative;
+    top: 13rem;
+    margin: auto;
+    background-image: url("Profile3.jpg");
+    background-size: cover;
+    z-index: 2;
+  }
+  #rect2 {
+    height: 50rem;
+    width: 40rem;
+    border: 10px solid gold;
+    position: relative;
+    margin-top: -32rem;
+    margin-left: 6rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.8);
+  }
+  #introduction {
+    height: 25rem;
+    width: 100%;
+    border: 0px solid white;
+    position: relative;
+    margin: auto;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    font-size: 2.5rem;
+    text-align: justify;
+    color: aqua;
+    text-shadow: 0 0 5px rgba(0,0,100,0.8);
+    transition: 0.5s;
+  }
+  #introduction:hover {
+    color: gold;
+  }
+  #container7 {
+    min-height: 40vh;
+    background-color: #111111;
+  }
+  #title7 {
+    font-size: 3rem;
+    text-align: center;
+    position: relative;
+    top: 8rem;
+    text-shadow: 0 0 10px rgba(0,0,0,0.6);
+    color: pink;
+  }
+  #signature {
+    height: 5rem;
+    width: 100%;
+    border: 0px solid white;
+    position: relative;
+    margin: auto;
+    top: 11rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    font-size: 2.5rem;
+    text-align: center;
+    color: gray;
+    text-shadow: 0 0 5px rgba(0,0,100,0.8);
+    transition: 0.5s;
+    opacity: 0.7;
+  }
+  #msg2 {
+    font-size: 2rem;
+    display: block;
+    margin-top: 1rem;
+  }
+  #socialLinks {
+    height: 8rem;
+    width: 100%;
+    border: 0px solid white;
+    position: relative;
+    margin: auto;
+    margin-top: 10rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+  }
+  .social {
+    color: white;
+    transition: 0.5s;
+    
+  }
+  .social:active {
+    opacity: 0.7;
+    outline: none;
+  }
+  .social:hover {
+    color: blue;
+  }
+  </style>
+</head>
+<body>
+  <section>
+  <div id="navBar">
+    <div id="logo">A<span class="text">N</span>S<span class="text">H</span></div>
+    <div id="link">
+      <a href="#a" class="links">SKILLS</a>
+      <a href="#b" class="links">PROJECTS</a>
+      <a href="#c" class="links">CONTACT</a>
+      <a href="#d" class="links">ABOUT ME</a>
+    </div>
+  </div>
+  <div id="textBox">
+    <h1 id="text1" class="texts">Hi, My Name</h1>
+      <h1 id="text2" class="texts"><span id="style1">is</span> Ansh Verma</h1>
+      <h1 id="text3" class="texts"><span id="style2">I'm</span> WEB-DEV<span id="style2">ELO</span>PER</h1>
+  </div>
+  <div id="container1">
+    <div id="img1">
+    </div>
+  </div>
+  </section>
+  <section id="a">
+    <div id="container2">
+      <h1 id="title2">MY SKILLS</h1>
+      <div class="skills" id="skill1">
+        <div class="skillLogo" id="skillLogo1"></div>
+        <div class="skillDescription">Experienced in using HTML to design modern, user-friendly website structures.</div>
+      </div>
+      <div class="skills">
+        <div class="skillDescription">Experienced with CSS for styling, positioning, and enhancing user experience.”</div>
+        <div class="skillLogo" id="skillLogo2"></div>
+      </div>
+      <div class="skills">
+        <div class="skillLogo" id="skillLogo3"></div>
+        <div class="skillDescription">Skilled in JavaScript for creating interactive, dynamic, and user-friendly web applications.”</div>
+      </div>
+      <div class="skills">
+        <div class="skillDescription">Skilled in PHP for building dynamic websites and handling server-side logic.</div>
+        <div class="skillLogo" id="skillLogo4"></div>
+      </div>
+      <div class="skills">
+        <div class="skillLogo" id="skillLogo5"></div>
+        <div class="skillDescription">Experienced with MySQL to store, retrieve, and optimize application data.</div>
+      </div>
+    </div>
+  </section>
+  <section id="b">
+    <div id="container3">
+      <h1 id="title3">MY PROJECTS</h1>
+      <div class="projects" id="project1">
+        <div class="projectLogo" id="projectLogo1"></div>
+        <div class="headings">E-COMMERCE PROJECT</div>
+        <div class="projectDescription">eCommerce website with cart, login, and order management.
+Built using HTML, CSS, JavaScript, PHP, and MySQL.</div>
+      </div>
+      <div class="projects" id="project2">
+        <div class="projectLogo" id="projectLogo2"></div>
+        <div class="headings">BlOG WEBSITE PROJECT</div>
+        <div class="projectDescription">Created a dynamic blog platform for publishing and managing posts.
+Focused on clean UI and smooth user experience.</div>
+      </div>
+      <div class="projects" id="project3">
+        <div class="projectLogo" id="projectLogo3"></div>
+        <div class="headings">QUIZ GAME PROJECT</div>
+        <div class="projectDescription"><p>Interactive quiz game with multiple-choice questions and score tracking.
+Built using HTML, CSS, and JavaScript. <a href="https://anshvermacoding.github.io/UltimateQuizGame/">Click To Play!</a></p></div>
+      </div>
+      <div class="projects" id="project4">
+        <div class="projectLogo" id="projectLogo4"></div>
+        <div class="headings">FLY-BIRD GAME PROJECT</div>
+        <div class="projectDescription"><p>Fly Bird game with obstacle-based gameplay and score tracking.
+Built using HTML, CSS, and JavaScript. <a href="https://anshvermacoding.github.io/FlyBird/">Click To Play!</a></p></div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div id="container4">
+       <h1 id="title4">MY CERTIFICATES</h1>
+      <div class="certificates" id="certificate1">
+        <div class="certificateLogo" id="certificateLogo1"></div>
+        <div class="certificateDescription">Passed the HTML proficiency test successfully.</div>
+      </div>
+      <div class="certificates" id="certificate2">
+        <div class="certificateLogo" id="certificateLogo2"></div>
+        <div class="certificateDescription">Successfully passed the CSS skills assessment.</div>
+      </div>
+    </div>
+  </section>
+  <section id="c">
+    <div id="container5">
+      <h1 id="title5">CONTACTS</h1>
+      <h2 id="message1">Have a project or question?</h2>
+      <h3 id="message2">
+Feel free to reach out using the contact form below.
+I’ll get back to you as soon as possible.
+      </h3>
+      <div id="contactLogo"></div>
+      <button id="contactButton">Contact Me</button>
+    </div>
+  </section>
+  <section id="d">
+    <div id="container6">
+      <h1 id="title6">ABOUT ME</h1>
+      <div id="rect1"></div>
+      <div id="rect2"></div>
+      <div id="introduction">Hello, I’m Ansh Verma, a web developer and BCA student who enjoys building websites using HTML, CSS, JavaScript, PHP, and MySQL. I love learning new technologies and turning ideas into functional web projects.</div>
+    </div>
+  </section>
+  <section>
+    <div id="container7">
+      <h1 id="title7">CONNECT WITH ME</h1>
+      <div id="socialLinks">
+        <a href="https://www.linkedin.com/in/ansh-verma-0a45062b4" class="social">
+        <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/AnshvermaCoding" class="social">
+        <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+      <div id="signature"><p>© 2026 Ansh Verma. All rights reserved.<br><span id="msg2">Developed & Design by Ansh Verma</span></p></div>
+    </div>
+  </section>
+</body>
+</html>
